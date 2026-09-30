@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nisha Kushwaha — Portfolio</title>
+<style>
+:root{--bg:#f7f7fb;--card:#fff;--text:#16161d;--muted:#63636f;--accent:#6c5ce7;--line:#e4e4ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0f16;--card:#181824;--text:#f1f1f7;--muted:#9a9aab;--accent:#8b7dff;--line:#2a2a3a}}
+:root[data-theme="dark"]{--bg:#0f0f16;--card:#181824;--text:#f1f1f7;--muted:#9a9aab;--accent:#8b7dff;--line:#2a2a3a}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:var(--bg);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:1.2rem}.logo span{color:var(--accent)}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;align-items:center}
+nav a:hover{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+#theme{background:none;border:1px solid var(--line);border-radius:50%;width:36px;height:36px;color:var(--text)}
+#menu{display:none;background:none;border:0;font-size:1.5rem;color:var(--text)}
+section{padding:80px 6%;max-width:1100px;margin:auto}
+h2{font-size:2rem;margin:0 0 30px}h2::after{content:"";display:block;width:50px;height:4px;background:var(--accent);margin-top:8px;border-radius:2px}
+.hero{min-height:80vh;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.hero>div{flex:1 1 320px}
+.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);margin:0;line-height:1.1}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:480px}
+.btn{display:inline-block;padding:12px 26px;border-radius:30px;background:var(--accent);color:#fff;font-weight:600;border:2px solid var(--accent);margin-right:10px;transition:.2s}
+.btn.alt{background:none;color:var(--accent)}.btn:hover{transform:translateY(-3px)}
+.avatar{width:min(280px,70%);aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,var(--accent),#00cec9);display:grid;place-items:center;font-size:5rem;color:#fff;font-weight:800;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent)}
+.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0 0 12px}
+.tag{display:inline-block;font-size:.75rem;padding:3px 10px;border-radius:20px;background:var(--bg);border:1px solid var(--line);margin:0 4px 4px 0}
+.thumb{height:130px;border-radius:10px;margin-bottom:16px;background:linear-gradient(135deg,var(--accent),#fd79a8)}
+.bar{margin-bottom:18px}.bar div:first-child{display:flex;justify-content:space-between;font-weight:600}
+.track{height:8px;background:var(--line);border-radius:5px;overflow:hidden;margin-top:6px}
+.fill{height:100%;width:0;background:var(--accent);border-radius:5px;transition:width 1.2s}
+form{display:grid;gap:14px;max-width:560px}
+input,textarea{width:100%;padding:14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(30px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:700px){#menu{display:block}nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px;border-bottom:1px solid var(--line)}nav ul.open{display:flex}}
+.tl{border-left:3px solid var(--accent);padding-left:18px;margin-bottom:22px}.tl h3{margin:0}.tl small{color:var(--muted)}ul.b{color:var(--muted);padding-left:18px;margin:8px 0 0}
+</style>
+</head>
+<body>
+<nav>
+<a href="#home" class="logo">Nisha<span>.</span></a>
+<button id="menu" aria-label="Menu">☰</button>
+<ul id="links">
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li>
+<li><button id="theme" aria-label="Toggle theme">◐</button></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div>
+<p>👋 Hello, I'm</p>
+<h1>Nisha Kushwaha,<br><span>Computer Science &amp; Engineering Student</span></h1>
+<p>Final-year B.Tech student turning raw data into actionable insights with Python, SQL, Power BI and machine learning.</p>
+<a href="#projects" class="btn">View Projects</a><a href="#contact" class="btn alt">Contact Me</a>
+</div>
+<div><div class="avatar">NK</div></div>
+</section>
+
+<section id="about" class="reveal">
+<h2>About Me</h2>
+<p style="color:var(--muted);max-width:720px">I'm a final-year B.Tech Computer Science &amp; Engineering student in Bhopal with hands-on experience through internships and independent projects. I enjoy data cleaning, exploratory data analysis, and building machine learning and deep learning models, backed by a strong foundation in data science and AI/ML.</p>
+<div class="grid" style="margin-top:24px">
+<div class="card"><h3>7.15</h3><p>Current CGPA</p></div>
+<div class="card"><h3>95.5%</h3><p>Best model accuracy (Random Forest)</p></div>
+<div class="card"><h3>3–4</h3><p>Hackathons participated in</p></div>
+</div>
+<div class="tl" style="margin-top:30px"><h3>B.Tech, Computer Science &amp; Engineering</h3><small>Jagran Lakecity University, Bhopal · Nov 2023 – 2027 (Expected)</small>
+<p style="color:var(--muted);margin:6px 0 0">SQL, Statistics, Data Visualization, EDA, Python, MS Excel</p></div>
+</section>
+
+<section id="skills" class="reveal">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card"><h3>Programming</h3><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SQL</span><span class="tag">C</span></div>
+<div class="card"><h3>Databases</h3><span class="tag">PostgreSQL</span></div>
+<div class="card"><h3>Data Visualization</h3><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">MS Excel</span></div>
+<div class="card"><h3>Machine Learning / AI</h3><span class="tag">Scikit-learn</span><span class="tag">Logistic Regression</span><span class="tag">Random Forest</span><span class="tag">PCA</span><span class="tag">K-Means</span><span class="tag">Deep Learning</span><span class="tag">TensorFlow/Keras</span><span class="tag">LLMs</span><span class="tag">Transformers</span><span class="tag">RAG</span><span class="tag">Prompt Engineering</span></div>
+<div class="card"><h3>Analytics</h3><span class="tag">Data Cleaning</span><span class="tag">EDA</span><span class="tag">KPI Analysis</span><span class="tag">Statistical Analysis</span></div>
+<div class="card"><h3>Web Development</h3><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Git</span></div>
+</div>
+</section>
+
+<section id="experience" class="reveal">
+<h2>Experience & Certifications</h2>
+<div class="tl"><h3>Data Analyst Job Simulation — Deloitte</h3><small>Virtual Internship · 2025</small>
+<ul class="b"><li>Analysed dashboards and interpreted data for a forensic technology case.</li><li>Used Excel to clean, analyse and visualize data to support decision-making.</li></ul></div>
+<div class="tl"><h3>Microsoft Excel Certification</h3><small>Data cleaning, visualization and KPI-based decision making</small></div>
+<div class="tl"><h3>Hackathons</h3><small>3–4 hackathons</small>
+<ul class="b"><li>Collaborated in teams and led a team through problem-solving and project execution.</li></ul></div>
+</section>
+
+<section id="projects" class="reveal">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><div class="thumb"></div><h3>Toxic Comment Detection System</h3><small style="color:var(--muted)">Independent · Apr – May 2026</small>
+<p>Text classifier using TF-IDF and NLP preprocessing. Logistic Regression and Random Forest models (95.5% accuracy with Random Forest), plus PCA and K-Means for deeper pattern analysis.</p><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">NLP</span></div>
+<div class="card"><div class="thumb" style="background:linear-gradient(135deg,#00b894,#0984e3)"></div><h3>AI-Based Personalized Medicine Recommendation</h3><small style="color:var(--muted)">Minor Project · Team of 2 · 2025</small>
+<p>Co-developed a system that suggests personalized medication from patient health data, handling data preprocessing and model design.</p><span class="tag">Python</span><span class="tag">Machine Learning</span></div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2>Contact</h2>
+<p style="color:var(--muted)">Based in Bhopal, Madhya Pradesh. Open to internships and data roles.</p>
+<p><a class="btn" href="mailto:kushwahanisha7076@gmail.com">Email Me</a><a class="btn alt" href="https://www.linkedin.com/in/nisha-kushwaha-ab58b3330" target="_blank" rel="noopener">LinkedIn</a><a class="btn alt" href="https://github.com/Nisha7076" target="_blank" rel="noopener">GitHub</a></p>
+</section>
+
+<footer>© 2026 Nisha Kushwaha</footer>
+<script>
+const root=document.documentElement;
+document.getElementById('theme').onclick=()=>{
+const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+root.dataset.theme=dark?'light':'dark'};
+const links=document.getElementById('links');
+document.getElementById('menu').onclick=()=>links.classList.toggle('open');
+links.onclick=()=>links.classList.remove('open');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%')}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
